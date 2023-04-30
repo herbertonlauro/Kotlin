@@ -10,19 +10,19 @@ data class Formacao(val nome: String, val conteudos: MutableList<ConteudoEducaci
     
     fun matricular(usuario: Usuario) {
         inscritos.add(usuario)
-        println("O usuário ${usuario.nome} foi matriculado na formação $nome.")
+        println("O Aluno ${usuario.nome} foi matriculado na formação $nome.")
     }
 }
 
 fun main() {
-    val usuario1 = Usuario("João")
-    val usuario2 = Usuario("Maria")
+    val usuario1 = Usuario("Herberton ")
+    val usuario2 = Usuario("Lauro")
 
     val conteudo1 = ConteudoEducacional("Introdução ao Kotlin", 90, Nivel.BASICO)
     val conteudo2 = ConteudoEducacional("Kotlin Avançado", 120, Nivel.INTERMEDIARIO)
-    val conteudo3 = ConteudoEducacional("Desenvolvimento Android com Kotlin", 180, Nivel.DIFICIL)
+    val conteudo3 = ConteudoEducacional("Desenvolvimento Kotlin DIO", 180, Nivel.DIFICIL)
 
-    val formacao = Formacao("Desenvolvimento Android com Kotlin", mutableListOf(conteudo1, conteudo2, conteudo3))
+    val formacao = Formacao("Desenvolvimento Kotlin DIO", mutableListOf(conteudo1, conteudo2, conteudo3))
 
     formacao.matricular(usuario1)
     formacao.matricular(usuario2)
